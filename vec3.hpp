@@ -6,12 +6,12 @@ struct vec3{
 };
 
 template<class coord_t>
-inline vec3<coord_t> operator-(const vec3<coord_t>& rhs){
+inline constexpr vec3<coord_t> operator-(const vec3<coord_t>& rhs){
     return {-rhs.x, -rhs.y, -rhs.z};
 }
 
 template<class coord_t>
-inline vec3<coord_t>& operator+=(
+inline constexpr vec3<coord_t>& operator+=(
     vec3<coord_t>& lhs, 
     const vec3<coord_t>& rhs
 ){
@@ -22,7 +22,7 @@ inline vec3<coord_t>& operator+=(
 }
 
 template<class coord_t>
-inline vec3<coord_t>& operator-=(
+inline constexpr vec3<coord_t>& operator-=(
     vec3<coord_t>& lhs,
     const vec3<coord_t>& rhs
 ){
@@ -33,7 +33,7 @@ inline vec3<coord_t>& operator-=(
 }
 
 template<class coord_t>
-inline vec3<coord_t> operator+(
+inline constexpr vec3<coord_t> operator+(
     const vec3<coord_t>& lhs, 
     const vec3<coord_t>& rhs
 ){
@@ -45,7 +45,7 @@ inline vec3<coord_t> operator+(
 }
 
 template<class coord_t>
-inline vec3<coord_t> operator-(
+inline constexpr vec3<coord_t> operator-(
     const vec3<coord_t>& lhs, 
     const vec3<coord_t>& rhs
 ){
@@ -57,7 +57,7 @@ inline vec3<coord_t> operator-(
 }
 
 template<class coord_t>
-inline vec3<coord_t> operator*(
+inline constexpr vec3<coord_t> operator*(
     const vec3<coord_t>& lhs, 
     coord_t rhs
 ){
@@ -69,7 +69,7 @@ inline vec3<coord_t> operator*(
 }
 
 template<class coord_t>
-inline vec3<coord_t> operator*(
+inline constexpr vec3<coord_t> operator*(
     coord_t lhs,
     const vec3<coord_t>& rhs
 ){
@@ -81,7 +81,7 @@ inline vec3<coord_t> operator*(
 }
 
 template<class coord_t>
-inline vec3<coord_t>& operator*=(
+inline constexpr vec3<coord_t>& operator*=(
     vec3<coord_t>& lhs, 
     coord_t rhs
 ){
@@ -92,7 +92,7 @@ inline vec3<coord_t>& operator*=(
 }
 
 template<class coord_t>
-inline vec3<coord_t> operator/(
+inline constexpr vec3<coord_t> operator/(
     const vec3<coord_t>& lhs, 
     coord_t rhs
 ){
@@ -104,7 +104,7 @@ inline vec3<coord_t> operator/(
 }
 
 template<class coord_t>
-inline vec3<coord_t>& operator/=(
+inline constexpr vec3<coord_t>& operator/=(
     vec3<coord_t>& lhs,
     coord_t rhs
 ){
@@ -115,7 +115,7 @@ inline vec3<coord_t>& operator/=(
 }
 
 template<class coord_t>
-inline bool operator==(
+inline constexpr bool operator==(
     const vec3<coord_t>& lhs, 
     const vec3<coord_t>& rhs
 ){
@@ -125,7 +125,7 @@ inline bool operator==(
 }
 
 template<class coord_t>
-inline bool operator!=(
+inline constexpr bool operator!=(
     const vec3<coord_t>& lhs, 
     const vec3<coord_t>& rhs
 ){
